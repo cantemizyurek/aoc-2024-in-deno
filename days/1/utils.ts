@@ -25,9 +25,7 @@ export function calculateDistanceBetweenLists(
 }
 
 function populateHeap(heap: BinaryHeap<number>, list: number[]) {
-  for (const item of list) {
-    heap.push(item)
-  }
+  heap.push(...list)
 }
 
 function calculateDistance(x: number, y: number) {
