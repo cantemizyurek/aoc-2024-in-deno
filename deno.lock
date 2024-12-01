@@ -53,6 +53,7 @@
   "workspace": {
     "dependencies": [
       "jsr:@std/assert@1",
+      "jsr:@std/data-structures@^1.0.4",
       "jsr:@std/expect@^1.0.8",
       "jsr:@std/testing@^1.0.5"
     ]
