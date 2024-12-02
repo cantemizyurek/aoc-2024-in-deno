@@ -1,4 +1,7 @@
-import { calculateDistanceBetweenLists } from './utils.ts'
+import {
+  calculateDistanceBetweenLists,
+  calculateDistanceBetweenListsPart2,
+} from './utils.ts'
 
 const input = await Deno.readTextFile(new URL('./input.txt', import.meta.url))
 
@@ -11,3 +14,4 @@ const list1 = numberPairs.map((pair) => pair[0])
 const list2 = numberPairs.map((pair) => pair[1])
 
 console.log(calculateDistanceBetweenLists(list1, list2))
+console.log(calculateDistanceBetweenListsPart2(list1, list2))

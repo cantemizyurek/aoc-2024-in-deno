@@ -24,6 +24,21 @@ export function calculateDistanceBetweenLists(
   return distance
 }
 
+export function calculateDistanceBetweenListsPart2(
+  list1: number[],
+  list2: number[]
+) {
+  const appearanceMap = new Map<number, number>()
+
+  for (const num of list2) {
+    appearanceMap.set(num, (appearanceMap.get(num) || 0) + 1)
+  }
+
+  return list1.reduce((acc, num) => {
+    return acc + num * (appearanceMap.get(num) || 0)
+  }, 0)
+}
+
 function populateHeap(heap: BinaryHeap<number>, list: number[]) {
   heap.push(...list)
 }
